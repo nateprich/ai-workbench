@@ -1,0 +1,9 @@
+Build a profile of my writing voice and a skill file that writes in it.
+
+**Corpus (exact):** (1) Outlook **Sent Items only**, last 3 years, from [account]. Keep only messages where I authored ≥3 paragraphs of new text and ≥60 words after stripping quoted chains, forwards, signatures, and footers. Exclude AI-drafted or AI-assisted text, pasted third-party text, bulk mail, and anything I forwarded. Deduplicate near-identical messages. (2) OneDrive .docx with last-modified date in [window]. Produce an **exhaustive inventory by full folder walk — do not rely on search results, which cap out.** Keep only documents I authored; exclude templates, charts, trackers, forms, and third-party or professionally ghostwritten pieces, and list every exclusion with its reason.
+
+**Method:** report a corpus manifest (counts kept/excluded by reason, total words). Measure, don't impressionistically describe: sentence length (mean/median), paragraph counts, openings and closings by frequency, punctuation rates per 1,000 words, and recurring phrases with counts. Label every claim as measured, sampled, or inferred, and report disagreements and uncertainty instead of resolving them silently.
+
+**Deliverable:** one self-contained Markdown file with these sections: voice summary; measured mechanics; registers (email / formal letters / instructions-specs / public posts / résumé) with audience-specific greetings and sign-offs; phrase bank; my known editing rules; anti-patterns; drafting workflow with a final self-check; evidence base, confidence, and limits. Examples must be **synthetic and de-identified** — patterns, not excerpts of my real mail. No tool-specific packaging.
+
+**Calibration test:** using only the facts in this brief — [2–3 sentence scenario] — draft the message. This makes outputs comparable across agents.

@@ -1,0 +1,1 @@
+Go through my docx files in OneDrive that are older than a year but less than three years old, and go through my Outlook emails from the past three years that are three or more paragraphs long. From those files, I want you to build a profile of my writing voice and build a skill file that writes in that voice which can be invoked whenever writing on my behalf.
