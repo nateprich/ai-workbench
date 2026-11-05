@@ -4,7 +4,7 @@ The writing collection: how to use AI to write better instead of using it to pro
 
 Three failures produce most of the slop I see, and each one has a fix:
 
-1. **Garbage in.** The writing starts before the thinking happens, so the AI builds structure around nothing. The fix is to be interviewed first, which is what the [interview branch](../interview/) is for.
+1. **Garbage in.** The writing starts before the thinking happens, so the AI builds structure around nothing. The fix is to be interviewed first, which is what the [thought-partner skill](../thought-partner/) is for.
 2. **The AI voice.** The draft comes back in a generic competent voice that belongs to nobody, because the model has never been shown how you write. The fix is a voice skill, a file built from your own sent writing that teaches your tools to write like you. The prompts below build one.
 3. **The skipped edit.** The draft reads well enough and ships unchecked, including the places where the AI was confidently wrong. No tool fixes this one. The tools get you about 80 percent of the way there, and the thinking before and the editing after are the 20 percent, and that part is still yours.
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Renamed the interview-first router to thought-partner and moved its folder from interview/ to thought-partner/. The upstream interview-me skill keeps its name.
+
 ## 0.1.0 - 2026-10-20
 
 Initial contents of the workbench:

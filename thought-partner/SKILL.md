@@ -1,9 +1,9 @@
 ---
-name: interview-first
+name: thought-partner
 description: Routes to the right pre-work interview before any serious AI-assisted work begins, then runs it. Use when an ask is underspecified (missing who it is for, why it matters, what success looks like, or the binding constraint), when the user brings a concrete plan, decision, or design that needs stress-testing before work starts, or when the user says "interview me", "grill me", "help me think through this", or "are we sure?" Picks interview-me for extracting intent one question at a time, and grill-me for grilling a plan as a decision tree. The point is clarity of perspective before the work goes forward, so the AI builds on what the user actually thinks instead of on a thin prompt.
 ---
 
-# Interview First
+# Thought Partner
 
 Most AI work goes wrong before the first draft exists. A thin prompt with no real point behind it gets structure and confidence built around nothing, and the fix is to make the thinking happen first. This skill is the step I take before engaging any serious project with AI: an interview that gets my perspective clear before the work goes forward. It routes between two upstream skills, because the right interview depends on what you brought.
 
