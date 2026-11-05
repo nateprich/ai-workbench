@@ -8,13 +8,13 @@ This is my workbench: the tools I actually use when I work with AI, published so
 
 | Branch | What it holds | Who it is for |
 | --- | --- | --- |
-| [thought-partner](thought-partner/) | The thought-partner router skill, which picks between a requirements interview and a plan grilling based on what you brought | Anyone starting serious work with an AI who wants their own thinking clear before the first draft exists |
+| [thought-partner](thought-partner/) | One self-contained skill for intent discovery, idea refinement, plan challenge, recurring-work thinking, and targeted decision lenses | Anyone thinking through a project, plan, article, or choice before committing to a direction |
 | [anti-slop](anti-slop/) | The writing collection: prompts that build a skill file which writes in your voice, from your own sent writing | Anyone whose AI drafts sound like everyone else's |
 | [copilot](copilot/) | Copilot-specific tools, including setup and model selection material | Reserved for now; the branch fills in as the posts that produce it are published |
 
 ## Installing
 
-If you have never installed a skill before, the easy path works in Copilot, ChatGPT, and Claude alike: tell your agent "I want to install the skills at https://github.com/nateprich/ai-workbench" and the agent should handle the rest. Ask it how to use the skill once it is installed if this is your first time; it is very easy, I promise.
+In a tool that supports installing agent skills, tell your agent "I want to install thought-partner from https://github.com/nateprich/ai-workbench" and have it include the complete skill folder. Ask it how to invoke the skill once installed. Installation and automatic discovery depend on your tool; see the [thought-partner instructions](thought-partner/README.md) for the folder, CLI, and migration options.
 
 If you use the skills CLI, the same install is one command:
 
@@ -22,15 +22,15 @@ If you use the skills CLI, the same install is one command:
 npx skills add nateprich/ai-workbench
 ```
 
-You can also copy any single file by hand. The skills are plain Markdown with a name and a description at the top, and the prompts in the anti-slop branch are plain text you paste into a chat. Nothing in here needs a build step.
+For a manual skill install, copy the complete skill folder, including its references and license files. The prompts in the anti-slop branch are individual text files you paste into a chat. Nothing in here needs a build step.
 
-## Where the interview modes come from
+## Where the thought-partner methods come from
 
-The thought-partner folder routes between two upstream skills, and both are worth installing on their own:
+The thought-partner folder bundles deliberately adapted methods from original publishers, with one shared routing and interaction contract. No separate upstream installations are required:
 
 - Matt Pocock's grill-me, for stress-testing a plan or decision, at https://github.com/mattpocock/skills
 - Addy Osmani's interview-me, for extracting what you actually want one question at a time, at https://github.com/addyosmani/agent-skills
 
-Both repos are MIT licensed, and this repo is MIT licensed as well. The router here links to the upstreams rather than copying them, so install theirs from their repos and this one for the routing.
+Optional lenses also draw on neurofoo, Claudio Babelis/radarist, Vladimir Kochetkov/v0lka, and sammcj, with an original short description of Gary Klein's premortem method. Exact pinned sources, modifications, and retained MIT/Apache-2.0 terms are in [the provenance record](thought-partner/PROVENANCE.md). Install the complete folder so its references and licenses travel with it.
 
 Nate Rich

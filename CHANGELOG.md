@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Rebuilt thought-partner as one self-contained skill with targeted internal methods, optional decision/challenge lenses, proportional completion, original-source attribution, and bundled licenses. Added migration guidance and isolated cold-start validation.
 - Renamed the interview-first router to thought-partner and moved its folder from interview/ to thought-partner/. The upstream interview-me skill keeps its name.
 
 ## 0.1.0 - 2026-10-20
