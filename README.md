@@ -26,6 +26,12 @@ For a manual skill install, copy the complete skill folder, including its refere
 
 Both skills work independently. Thought Partner can offer a useful next step and route to a suitable available skill, including Coding Implementation for software work. Coding Implementation also accepts a clear spec directly. Independent agent verification requires a host that supports it; an unavailable check remains outstanding.
 
+### ChatGPT and repository updates
+
+The skill folders in this repository are the source of truth. Local installations can update with the skills CLI. ChatGPT account plugins are a separate distribution path: install the plugin in ChatGPT to make it available in Chat and Work, and copy updates from the repository into that existing plugin. Installing or updating a local skill does not perform that account installation or sync.
+
+The [ChatGPT sync procedure](docs/chatgpt-skill-sync.md) describes the one-way update and verification process. It preserves the existing plugins and their presentation; there is no separately authored ChatGPT edition of either skill.
+
 ## Where the thought-partner methods come from
 
 The thought-partner folder bundles deliberately adapted methods from original publishers, with one shared routing and interaction contract. No separate upstream installations are required:

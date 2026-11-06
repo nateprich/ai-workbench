@@ -1,0 +1,27 @@
+# Keep ChatGPT skills aligned with the repository
+
+Maintain skill instructions only in `thought-partner/` and `coding-implementation/`. ChatGPT plugins contain generated distribution copies of those complete folders, including references and licenses. Plugin version numbers are release counters, not separate skill editions.
+
+Local filesystem installation, account plugin installation, and account plugin publication are separate operations. Install each existing plugin once in ChatGPT. Verify its installed state and selection in the intended Chat/Work composer; a successful upload alone does not establish availability. If a host cannot execute code or dispatch independent agents, the skill must leave those checks outstanding rather than claiming them completed.
+
+## Scheduled update contract
+
+Use one existing maintenance automation. Preserve its schedule and notification policy. The account-specific plugin IDs and local storage locations belong in that automation's configuration, not this public repository. Do not create new plugins during routine sync.
+
+1. Run `npx --yes skills@latest update --global --yes`, without restricting skill names or repositories. Then run `npx --yes skills@latest list --global --agent codex --json`. Check exit status, reported failures or skipped checks, and the update sources of installed repository-managed skills. Record the installed count. Bundled system/plugin skills are not npx-managed installations.
+2. Fetch `main` from `https://github.com/nateprich/ai-workbench.git` in the existing local repository and immediately resolve the fetched full commit SHA. Read source with `git show <SHA>:<path>` or materialize that commit with `git archive` into the authorized temporary location. Do not check out, pull, reset, or publish the development working tree, and do not use a stale local branch. Keep caches, packages, and evidence in the authorized location. Confirm the local installed copies of these two skills match that snapshot; if the source changed during the run, reconcile once against a fresh snapshot or report the race as incomplete.
+3. For each configured existing account plugin, obtain its complete current file inventory through Plugin Creator, following pagination. Verify the expected name, ID, scope, and audience, and retain the current release ID. Read both manifests and every file under its mapped `skills/<name>/` subtree, in supported batch sizes. Resolve incomplete, binary, or size-limited reads with the supported archive reader; never treat an unread file as absent or unchanged.
+4. Compare the complete repository folder with the complete plugin skill subtree using exact relative path sets and bytes. Include reference and license files. If they match, do not publish or increment the version. A change elsewhere in the repository is not a reason to release these skills.
+5. For a real difference, package the complete source skill folder under `skills/<name>/`, plus the current manifests with their patch versions advanced consistently. Preserve plugin identity, scope, audience, presentation, default prompts, assets, and unrelated components. Preserve repository/homepage metadata. Do not copy unrelated repository files into the plugin or adapt the skill instructions for ChatGPT.
+6. Updates overlay existing files. Compute explicit `delete_paths` for files present only in the old mapped skill subtree. Delete nothing outside that subtree; do not both upload and delete a path. Reject an absent/empty source skill, unsafe paths, or unexplained additional skill components instead of publishing a broken or broadened package.
+7. Publish using the verified plugin ID and `expected_release_id`. On a release conflict, reread and compare current source before rebuilding; never retry a stale archive with a substituted release ID. Do not create a replacement plugin, change sharing, or change local installation settings.
+8. Read back the complete inventory and skill bytes. Require exact agreement with the pinned source, the expected new release, the absence of removed files, consistent manifest versions, and preserved unrelated components. A successful upload without complete readback is not a verified sync. Do not automatically republish after an uncertain result.
+9. Record source commit, local skill count, plugin IDs/releases, file counts, changed/deleted paths, and verification outcome. If either plugin or the local update fails, the overall run is incomplete even if the other updates succeeded. Report the failing operation, observed error, and remaining action; do not repair unrelated workflows or silently weaken the checks.
+
+## Availability and limits
+
+Both skills can be selected by name through ChatGPT's `@` picker after the corresponding account plugins are installed. The spec Page is a document, not a skill invocation. Skill execution still depends on the capabilities available in that particular chat.
+
+Native GitHub marketplace sync is documented for workspace administrators and workspace plugins. Personal account plugins can instead be kept aligned by a scheduled agent with repository access and Plugin Creator's supported read/update tools. Missing access or tools is an incomplete run, not permission to use an undocumented API.
+
+References: [Skill distribution controls](https://learn.chatgpt.com/docs/enterprise/skills), [using plugins](https://learn.chatgpt.com/docs/plugins), and [workspace GitHub sync](https://learn.chatgpt.com/docs/enterprise/plugin-management).

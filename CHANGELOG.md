@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Documented one-way repository-to-ChatGPT plugin sync, including complete-file comparison, guarded updates, deletion handling, and readback verification.
 - Added Coding Implementation: one standalone skill for bounded software specs, automatic coordination, cold-start work items, independent acceptance tests, and focused repair loops.
 - Extended Thought Partner with optional next steps and routing to suitable available skills, preserving standalone use and the user's authorization across handoffs.
 - Verified installed skill discovery, planning-only handoffs, and a two-item implementation with independent defect detection, repair, and final saved-output checks.
