@@ -56,7 +56,15 @@ flowchart TD
 
 There is no required progression through all the methods. Domain modeling can support any discussion with ambiguous domain language. Research happens when relevant facts would change the thinking. Independent review uses the existing challenge lenses where supported and authorized; scrutiny already done counts. Every iteration must address a material question or new evidence. An open question can be a useful stopping point.
 
-Work stays in chat unless saving is requested or already authorized. A workflow discussion need not become a spec or automation. If you have already asked for subsequent drafting or implementation, the assistant can continue that authorized work after the thinking portion.
+Work stays in chat unless saving is requested or already authorized. A workflow discussion need not become a spec or automation.
+
+## Optional next steps
+
+When useful, Thought Partner can offer a concrete continuation: draft the email, outline the presentation, develop the article, or turn a software direction into a spec. It usually recommends one next action, respects a request to stop, and does not repeat declined offers. Finishing with clarity or an open question remains valid.
+
+The assistant uses the capabilities actually available. It honors your explicit skill choice; otherwise, suitable skills you created or explicitly prefer take priority when that ownership or preference is reliably known. Complementary skills can work together when needed. General skills or ordinary assistant capabilities remain valid alternatives, and no particular companion skill is required or assumed installed.
+
+“Think this through, then draft the spec” authorizes that draft once the thinking is ready. Accepting an offer to draft a spec does not authorize building it. Earlier execution authorization still applies without another approval ritual. A handoff carries the useful context, authorized next action and limits, and decisions still awaiting you; a fresh chat or agent receives a short brief with necessary source references. When another workflow delegates a thinking subtask, Thought Partner returns the result to that workflow.
 
 ## What is bundled
 

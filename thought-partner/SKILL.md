@@ -50,4 +50,14 @@ For substantial plans, architecture, consequential choices, and handoffs, prefer
 
 Finish when the user has useful clarity, viable options, or a direction and understands the important tradeoffs and uncertainties. Summarize at the depth they need; they own consequential commitment. An exploratory conversation can end with an open question. No full specification, saved one-pager, experiment, approval ritual, or execution handoff is compulsory.
 
-If the user already requested subsequent drafting or implementation, finish the thinking portion and continue that authorized work through the host's normal workflow. This skill adds no extra permission gate and grants no new execution authority.
+## Optional continuation
+
+At a natural stopping point, offer a next action when it would help, using the user's outcome: draft the email, outline the presentation, develop the article, or turn the agreed software direction into a spec. Prefer one concrete recommendation; offer a small set only when the alternatives differ meaningfully. Do not add an offer after a request to stop or repeat one the user declined. If this was a delegated thinking subtask, return the useful result and remaining questions to the calling workflow so it can resume at the appropriate stage.
+
+For a chosen continuation, identify the capabilities it needs. Honor the user's explicit skill choice; if it cannot be used, explain the limitation rather than silently substituting. Otherwise, among skills that fit the task, prefer those reliably identified as created or explicitly preferred by the current user. Do not infer ownership or preference from a skill's name. Combine complementary capabilities only when needed, such as writing voice and presentation authoring.
+
+Use skills exposed by the host and supported targeted discovery when useful; the visible catalog may be incomplete. Check availability and load the chosen instructions before acting. An unsuitable or unavailable custom skill does not displace a suitable available capability. General skills and ordinary assistant capabilities are valid fallbacks. No installation, registry, connector, or companion skill is required.
+
+Carry the authority actually given. A thinking-only request authorizes thinking and an optional offer. A settled direction or routing recommendation grants no new authority; accepting an offer to draft a spec authorizes drafting, not building. If the user already requested subsequent drafting or implementation, continue that authorized work after the thinking portion without a new approval ritual. Consequential decisions still awaiting the user remain theirs.
+
+Transfer the relevant goal, audience or users, decisions, constraints, non-goals, and unresolved questions. Include the authorized next action, its scope and limits, and consequential decisions still awaiting the user, preserving the relevant user instruction or a concise reference when available. Reuse the conversation in the same chat. For a fresh chat or agent, provide a short self-contained brief and necessary source references. A handoff does not require a new saved document.

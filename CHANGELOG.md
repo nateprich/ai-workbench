@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added Coding Implementation: one standalone skill for bounded software specs, automatic coordination, cold-start work items, independent acceptance tests, and focused repair loops.
+- Extended Thought Partner with optional next steps and routing to suitable available skills, preserving standalone use and the user's authorization across handoffs.
+- Verified installed skill discovery, planning-only handoffs, and a two-item implementation with independent defect detection, repair, and final saved-output checks.
 - Rebuilt thought-partner as one self-contained skill with targeted internal methods, optional decision/challenge lenses, proportional completion, original-source attribution, and bundled licenses. Added migration guidance and isolated cold-start validation.
 - Renamed the interview-first router to thought-partner and moved its folder from interview/ to thought-partner/. The upstream interview-me skill keeps its name.
 
