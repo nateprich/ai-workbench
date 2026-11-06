@@ -1,6 +1,6 @@
 # AI Workbench
 
-Agent skills, prompts, and setups for deliberate AI-assisted knowledge work: thought partnership, writing in your own voice, and Copilot configuration. For Copilot, ChatGPT, and Claude.
+Agent skills and prompts for thinking through ideas and writing in your own voice.
 
 This is my workbench: the tools I actually use when I work with AI, published so other people can use them too. The practice behind all of it is plain. Get clarity of perspective before the work starts, write in your own voice while the work happens, use judgment about the tools instead of accepting whatever they hand back, and edit what comes back like it matters. The tools in here support one or more of those four steps. Anything deep in a technical domain's weeds lives in its own repo, not this one, so the workbench stays useful to a general practitioner.
 
@@ -10,7 +10,6 @@ This is my workbench: the tools I actually use when I work with AI, published so
 | --- | --- | --- |
 | [thought-partner](thought-partner/) | One self-contained skill for intent discovery, idea refinement, plan challenge, recurring-work thinking, and targeted decision lenses | Anyone thinking through a project, plan, article, or choice before committing to a direction |
 | [anti-slop](anti-slop/) | The writing collection: prompts that build a skill file which writes in your voice, from your own sent writing | Anyone whose AI drafts sound like everyone else's |
-| [copilot](copilot/) | Copilot-specific tools, including setup and model selection material | Reserved for now; the branch fills in as the posts that produce it are published |
 
 ## Installing
 
