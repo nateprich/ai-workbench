@@ -1,47 +1,64 @@
-# Specify and split
+# Prepare the work
 
-Use this stage only to fill consequential gaps. A ready spec or bounded item can enter implementation directly. Keep existing project document and task conventions; a small change may need only a short contract in the conversation and one item.
-
-## Resolve the questions that change the work
-
-Inspect relevant code, behavior, and accessible facts before asking the user to supply them. Ask about unresolved goals, preferences, scope, or consequential tradeoffs. Use available thinking support when useful; return its decisions and uncertainties to this workflow. Do not grill settled answers again or ask merely to fill a template.
-
-Show the proposed approach and consequential tradeoffs. Distinguish delegated implementation choices from decisions the user still owns. Agreement can already exist in the supplied request or context; use it. If agreement on a material decision is missing, resolve that decision before dependent work. Drafting a spec remains separate from authorization to execute it.
+Use one preparation process to reach Ready. Clarifying, shaping, specifying, splitting, and checking readiness are techniques within it, not separate states or approval ceremonies. Reuse an adequate supplied contract. A small change can remain one compact work record; use [project setup](setup.md) when durable tracking is needed.
 
 ## Establish the completion contract
 
-Use stable references for requirements, acceptance criteria, and items, so builders and verifiers can identify the same obligations. Record the authoritative spec version or snapshot. Make these clear at the project's scale:
+Inspect relevant code, observed behavior, and accessible facts before asking the user. Reuse settled answers. Ask only about consequential unresolved goals, preferences, scope, or tradeoffs; routine implementation choices remain delegated. A documented claim is not observed behavior when that distinction affects acceptance. Record material assumptions and their evidence or uncertainty.
 
-- Intended outcome, users, and observable behavior, with concrete acceptance examples.
-- In-scope work, explicit non-goals, existing-system constraints, and deliberate limits on complexity.
-- Important failure cases, acceptance checks, and test priorities selected before implementation. The tests themselves may be written later.
-- Bounded items, dependencies, and the final assembled path from the intended entrypoint to its observable effect.
-- Unresolved decisions that could change the work, their consequences, and which work depends on them.
+An agreed output representation can still leave the source input's units, format, or conversion undefined. Ground consequential input and interface meanings in the spec, authoritative source definitions, or observable existing behavior. A prior work item's “settled” label is not evidence for missing semantics. When plausible interpretations produce materially different behavior, record the needed decision and keep affected work Needs definition. Preserve independently settled contracts and continue useful preparation.
 
-Include only relevant guardrails, stated concretely: intended environment, supported users and scale, permitted dependencies or services, compatibility expectations, deferred features, and complexity that would be unjustified here. Builders and reviewers share these boundaries. Avoid vague “production-ready” or “scalable” goals when the actual requirement can be stated.
+Identify the authoritative spec version or snapshot and stable requirement/acceptance references. At the project's scale, establish:
 
-## Choose useful work items
+- Intended outcome, users, observable behavior, and concrete acceptance examples.
+- Scope, non-goals, rejected alternatives, relevant constraints, and deliberate limits on complexity.
+- Important failure cases and test priorities; tests themselves may be written after implementation.
+- The final user path from its entrypoint to the required observable effect.
+- Consequential unknowns, affected work, and who can resolve them.
 
-Prefer a complete observable behavior slice. Split when dependencies, execution, or review become clearer, not to satisfy a line count, a time box, or a ticket-per-edit rule. One item is enough when it can be built and verified as a coherent change. Identify shared files, data, and interfaces whose concurrent modification would be unsafe; the coordinator chooses sequencing or isolation as needed.
+Keep guardrails concrete: intended environment and users, supported scale, compatibility, permitted dependencies or services, and deferred features where relevant. Show consequential approaches and tradeoffs before treating them as settled. Agreement can already exist in the request or context; drafting a spec alone does not authorize building.
 
-Describe what each item may change, including shared behavior and interfaces. Link earlier accepted artifacts or contracts needed by dependent items. Do not turn an implementation guess into a prescribed sequence of edits: a builder must inspect the code and can redesign within the item's bounds while preserving the spec.
+## Cover the whole outcome, detail the next useful batch
 
-## Cold-start work packet
+Keep one authoritative project outcome and a compact map from **every required outcome → work item(s) → acceptance evidence**. Include setup, integration, and delivery when required by the spec. Keep explicit non-goals outside the map. Record missing required work rather than silently narrowing the project to the tickets already created.
 
-Provide a short self-contained brief for a new builder or chat. Use accessible references for existing details, but include any consequential decision otherwise present only in the conversation. Adapt this format rather than creating empty fields or a new file for every handoff:
+For a large project, detail the next useful batch and represent later required work as Needs definition with known boundaries, unknowns, and dependencies. Routine future implementation detail need not block useful work now. An unspecified interface or consequential decision needed by the current batch does block the affected items.
+
+Split by coherent, observable behavior when it improves execution or verification; retain one item when it can be built and checked coherently. Do not impose line counts, a ticket per edit, mandatory scaffolding, long user-story inventories, or automatic prefactoring. Inspect actual shared interfaces and write conflicts that affect the plan without requiring an all-pairs matrix for unrelated work.
+
+Summarize parent progress from agreed outcomes, unresolved work, accepted child results, and final verification. Identify what can advance and the next action; do not apply a duplicate item-level Ready gate to the parent. All existing children being Done is insufficient if promised outcomes remain uncovered. Deferral leaves required outcomes outstanding unless the user approves the scope change.
+
+## Give each item an executable brief
+
+Link existing detail rather than duplicating the spec. The brief stays subordinate to its identified spec revision. Describe behavior, contracts, and bounds; code locations are navigation aids, not a prescribed edit sequence. A fresh agent needs:
 
 ```text
-Item: stable identifier and intended observable outcome
-Authority: authorized next action and scope; relevant user instruction/reference;
-           execution limits; decisions still awaiting the user
-Contract: authoritative spec version/snapshot and acceptance references;
-          relevant examples, guardrails, non-goals, and final user-path context
-Bounds: allowed changes, including shared behavior/interfaces; excluded work
-Workspace: repository/location, relevant entrypoints, setup/run instructions
-Dependencies: accepted prerequisite artifacts/interfaces and their identities
-Uncertainty: known constraints, material unknowns, and blocked decisions
-Checks and return: required checks; artifact identity, changes, observed results,
-                   acceptance mapping, limitations, and unresolved issues
+Item: stable ID, intended observable outcome, requirement/acceptance references
+Authority: authorized next action and scope; user instruction/reference;
+           execution limits and pending consequential decisions
+Contract: authoritative spec version/snapshot; examples, constraints,
+          non-goals, relevant interfaces, and final user-path context
+Bounds: allowed changes and excluded work, including shared behavior/interfaces
+Workspace: repository/location, entrypoint, setup/run pointers, write ownership
+Tracking: saved configuration and exact item/evidence destination
+Dependencies: required accepted results/contracts and their identities;
+              what is available, what is waiting, and the clearing condition
+Progress: current stage, settled decisions, artifact/checkpoint, unresolved
+          questions or findings, and the actual next action
+Checks and return: required checks; artifact and spec identities, changes,
+                   observed results, acceptance mapping, and limitations
 ```
 
-The receiving agent must be able to find the contract and artifacts without the prior chat. Check access and missing authority before dispatch rather than letting a fresh agent invent them. A thinking handoff carries goal, users, decisions, constraints, non-goals, unresolved questions, and the authorized next action; convert it into a work packet only if implementation is authorized and the contract is ready.
+Include consequential decisions present only in conversation. Make the referenced spec, setup, and prerequisite results accessible to delegates. A thinking handoff carries goals, users, decisions, constraints, non-goals, unresolved questions, and authorized next action; prepare its executable brief only as far as the user's authority permits.
+
+## Check readiness and preserve partial work
+
+Ready means an actionable contract, appropriate bounds, concrete acceptance, and understood dependencies, with no consequential definition decision remaining. A settled item can be Ready while waiting for a known upstream implementation; an item whose behavior or acceptance depends on an unanswered upstream decision remains Needs definition. Build eligibility is a separate check in [coordination](coordinate.md#select-the-right-assignment).
+
+For a substantial new decomposition, use a fresh independent readiness reviewer when supported, following the user's review requirements. Give it the spec, actionable packets, and necessary project references without the drafting conversation. Ask which unanswered questions force consequential guesses, including missing required outcomes or incompatible shared interfaces. Reuse that review across the unchanged batch rather than requesting approval for every item. If required independent review is unavailable, disclose the outstanding check and continue only work that does not depend on it.
+
+Resolve findings by cause: recover answers already in the spec/project; settle delegated implementation choices; test a material technical premise with the smallest useful authorized investigation. Create a separate bounded investigation only when needed. Return consequential user choices, required spec redesign, or item-external implementation redesign to the user with evidence and a recommendation. Do not invent an answer to make an item appear ready.
+
+If preparation pauses, save settled decisions, draft spec/items, unresolved questions, and the next action in the same record. For example: “Behavior and scope settled; resolve partial-import handling, then finish splitting import items.” Remain Needs definition and resume the unfinished work without repeating settled grilling. A missing command or pointer calls for context repair, not automatic reshaping.
+
+An approved spec/interface change can invalidate affected readiness and evidence even with unchanged code; changed artifacts can do the same with an unchanged spec. Mark the affected items and checks, preserve unrelated valid work, and seek the user's decision before an overall spec redesign.

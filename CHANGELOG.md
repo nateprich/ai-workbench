@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Updated Coding Implementation with saved project setup, GitHub and local-file tracker templates, a five-state work-item lifecycle, incremental preparation with whole-spec coverage, and explicit recovery and evidence-invalidation rules.
 - Documented one-way repository-to-ChatGPT plugin sync, including complete-file comparison, guarded updates, deletion handling, and readback verification.
 - Added Coding Implementation: one standalone skill for bounded software specs, automatic coordination, cold-start work items, independent acceptance tests, and focused repair loops.
 - Extended Thought Partner with optional next steps and routing to suitable available skills, preserving standalone use and the user's authorization across handoffs.

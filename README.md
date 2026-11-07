@@ -9,7 +9,7 @@ This is my workbench: the tools I actually use when I work with AI, published so
 | Branch | What it holds | Who it is for |
 | --- | --- | --- |
 | [thought-partner](thought-partner/) | One self-contained skill for intent discovery, idea refinement, plan challenge, recurring-work thinking, and targeted decision lenses | Anyone thinking through a project, plan, article, or choice before committing to a direction |
-| [coding-implementation](coding-implementation/) | One coding workflow for bounded specs, fresh-agent work items, automatic coordination, and independent verification | Anyone building software who wants strong acceptance checks without unnecessary scaffolding or endless review |
+| [coding-implementation](coding-implementation/) | One coding workflow with saved project setup, bounded specs and work states, fresh-agent coordination, and independent verification | Anyone building software who wants strong acceptance checks without unnecessary scaffolding or endless review |
 | [anti-slop](anti-slop/) | The writing collection: prompts that build a skill file which writes in your voice, from your own sent writing | Anyone whose AI drafts sound like everyone else's |
 
 ## Installing

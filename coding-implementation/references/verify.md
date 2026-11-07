@@ -6,7 +6,7 @@ Independent verification is actual testing against the contract, with review of 
 
 Use a fresh agent separate from the builder when supported and authorized. Supply only the context it needs:
 
-- Relevant authoritative spec snapshot, acceptance criteria, examples, scope, and guardrails.
+- Relevant authoritative spec/contract revision or snapshot, acceptance criteria, examples, scope, and guardrails.
 - Actual artifact and its identity, workspace, intended environment and entrypoint, setup, and required checks.
 - Authorized test actions and limits, accepted dependency contracts, and material unresolved decisions.
 
@@ -24,7 +24,7 @@ For software, run the real behavior in the authorized intended environment and i
 
 For skills, use realistic requests with permitted raw inputs and examine actual decisions, actions, outputs, and artifacts. Metadata and reference checks are useful structural checks, not behavioral proof. Keep evaluation artifacts isolated from the product and outside its source package.
 
-Return the artifact identity, criteria checked, actions or commands performed, expected and observed outcomes, environment limits, and findings. “Tests passed” or an empty findings list alone is insufficient evidence.
+Save evidence at the configured destination. Each acceptance record identifies the criterion, applicable spec/contract revision, artifact revision or snapshot, action/check, expected and observed outcome, and material limitations. Distinguish **passed**, **failed**, and **unverified**. “Tests passed” or an empty findings list alone is insufficient evidence. An enqueue response, passing mock, or acknowledgment cannot prove an unobserved required effect.
 
 ## Decide what needs another round
 
@@ -41,8 +41,12 @@ Minor requirement mismatches still need repair and affected checks, but do not t
 
 ## Fix, recheck, and stop
 
-Fix substantiated serious findings within scope and repeat independent review as needed. There is no fixed round cap that waives acceptance. After the initial review, follow-ups focus on unresolved serious findings, their fixes, and consequential affected behavior. Broaden only when changes or new evidence materially invalidate earlier verification, and state why. Preserve the evidence that remains valid.
+Fix requirement mismatches within scope. The coordinator returns a result needing product repairs from Verifying to Building, and the repaired result to Verifying for affected checks. Missing or invalidated evidence alone leaves the relevant work in Verifying. A materially incomplete contract returns the affected item to Needs definition; spec redesign and item-external implementation redesign require the user's decision. Record the reason rather than resetting everything to Ready.
 
-Close an item or final review only when required acceptance checks pass on the current result and no substantiated serious concerns remain. After cleanup, rerun affected checks; reopen review only when a change or new evidence creates a serious concern. A resolved or dismissed finding requires new evidence or a relevant change to reopen. Nits do not start another broad search.
+Repeat focused independent review while substantiated serious concerns remain. There is no fixed round cap that waives acceptance. After the initial review, follow-ups focus on unresolved serious findings, their fixes, and consequential affected behavior. A further broad search requires a substantiated serious concern; broaden only when changes or new evidence materially invalidate earlier verification, stating why. Both artifact changes and approved spec/interface changes can invalidate acceptance and dependent readiness, even if the other remains unchanged. Preserve unaffected evidence.
+
+The coordinator marks an item Done only when required checks pass on its current artifact and applicable contract, no substantiated serious concerns remain, and its accepted result is available as dependents require. After cleanup, rerun affected checks; reopen a Done item only when a relevant change or new evidence invalidates acceptance. A resolved or dismissed finding requires new evidence or a relevant change to reopen. Nits do not start another broad search.
+
+Project completion additionally requires accepted coverage of every agreed outcome and independent verification of the integrated result. All existing children being Done cannot hide missing promised work; a deferred required outcome remains outstanding unless the user approves a scope change. An unavailable required check, missing independent verification, or missing required final-effect evidence prevents completion. Read back uncertain tracker writes before retrying, and report unfinished state/evidence updates separately from observed product behavior.
 
 Repeated attempts without useful progress, unavailable required evidence, or a consequential disagreement that evidence cannot resolve call for a blocker report and the needed user decision or access. Do not silently weaken the contract, declare success, or repeat the same loop indefinitely. Report delivered behavior, checked acceptance criteria, observed results, and any limits or outstanding items. When the finite agreed work is complete, stop.
